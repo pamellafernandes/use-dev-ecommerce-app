@@ -1,0 +1,38 @@
+.cartItems {
+  width: 70%;
+  padding: 36px;
+  background-color: var(--cinza-claro);
+}
+
+.cartItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 24px;
+}
+
+.cartImageContainer {
+  min-width: 170px;
+}
+
+.cartImageContainer img {
+  width: 170px;
+  display: block;
+}
+
+.itemDetails {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.itemDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+
+

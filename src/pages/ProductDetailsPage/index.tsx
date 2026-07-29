@@ -4,10 +4,11 @@ import axios from "axios";
 
 import Styles from "./ProductDetailsPage.module.css";
 import Typography from "../../components/Typography";
-import ProductDetail from "../../components/ProductDetail/ProductDetail";
+import ProductDetail from "../../components/ProductDetail";
 import { PRODUCTS_BASE_URL } from "../../common/constants/endpoints";
 import { Product } from "../../common/types/product";
 import StatusHandler from "../../common/utils/statusHandler";
+import BackgroundBanner from "../../components/BackgroundBanner";
 
 type ProductDetailsPageProps = {
   addToCart: (product: Product) => void;
@@ -42,6 +43,8 @@ function ProductDetailsPage({ addToCart }: ProductDetailsPageProps) {
   }, [id]);
 
   return (
+    <>
+    <BackgroundBanner backgroundImage="" />
     <main className="container">
       <section>
         <div className={Styles.productContainer}>
@@ -65,6 +68,7 @@ function ProductDetailsPage({ addToCart }: ProductDetailsPageProps) {
         </div>
       </section>
     </main>
+    </>
   );
 }
 
