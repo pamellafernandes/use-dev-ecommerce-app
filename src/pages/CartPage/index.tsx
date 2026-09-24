@@ -10,10 +10,11 @@ import CartSummary from "../../components/CartSummary";
 
 type CartPageProps = {
   cartItems: Product[];
+  cartCount: number;
   removeFromCart: (id: number) => void;
 };
 
-const CartPage = ({ cartItems, removeFromCart }: CartPageProps) => {
+const CartPage = ({ cartItems, cartCount, removeFromCart }: CartPageProps) => {
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
   const freight = cartItems.length > 0 ? 8 : 0;
 
@@ -48,7 +49,7 @@ const CartPage = ({ cartItems, removeFromCart }: CartPageProps) => {
         </div>        
      
         <CartSummary 
-          cartItems={cartItems}
+          itemCount={cartCount}
           total={total}
           freight={freight}
           handleRedirect={handleRedirect} 
